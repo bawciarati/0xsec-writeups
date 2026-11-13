@@ -4,7 +4,7 @@ Windows internals. The parts you never need until you're staring at a process th
 
 ## Posts
 
-- [UAC Bypass through CMSTPLUA: What the Two DLLs Actually Do](2026-11-13-uac-bypass-cmstplua.md) — an auto-approved COM class, two Microsoft DLLs, and the vtable slot that runs your command as administrator.
+- [UAC Bypass: Analyzing the CMSTPLUA COM Object](2026-11-13-uac-bypass-cmstplua.md) — an auto-approved COM class, two Microsoft DLLs, and the vtable slot that runs your command as administrator.
 
 ## What I'm planning to write
 

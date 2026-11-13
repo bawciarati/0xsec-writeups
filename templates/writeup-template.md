@@ -2,7 +2,7 @@
 description: One-line English summary of what this post proves. This is what appears in search results and social cards.
 ---
 
-# Sample Name: What It Actually Does
+# Technique Name: Analyzing a Sample Name
 
 {% hint style="info" %}
 **TL;DR.** Two to four sentences: what the file is, how it is obfuscated, what it does at runtime, and the single most important security finding. No code, no hedging — just the conclusion.

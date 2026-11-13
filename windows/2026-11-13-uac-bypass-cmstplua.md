@@ -2,7 +2,7 @@
 description: The CMSTPLUA UAC bypass, read from the two Microsoft DLLs that implement it. Where the CLSIDs are registered, why cmstplua.dll forwards to cmlua.dll, which vtable slot ShellExec lives in, and what the elevation moniker actually asks the OS to do.
 ---
 
-# UAC Bypass through CMSTPLUA: What the Two DLLs Actually Do
+# UAC Bypass: Analyzing the CMSTPLUA COM Object
 
 {% hint style="info" %}
 **TL;DR.** `CMSTPLUA` is a COM class Microsoft publishes so that connection-manager UI can elevate itself. It is on the auto-approval list, so asking for an elevated instance through the elevation moniker starts an elevated COM server without a consent prompt. The registered server is `cmstplua.dll`, which is a proxy/stub plus a class factory that forwards to a second class, `CMLUAUTIL`, in `cmlua.dll`. That second DLL holds the actual implementation, and `ShellExec` is vtable slot 9, where it is a thin wrapper over `ShellExecuteExW`. You get an elevated shell by calling one method on one interface. The interesting part is not the call, it is that a medium-integrity process is allowed to make it.

@@ -4,14 +4,14 @@
 
 ## Malware Analysis
 
-* [DBDJpx: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
-* [WandEnhancer: Patching Another App's Fuses](malware-analysis/2026-11-13-wandenhancer.md)
+* [Insecure Update Channel: Analyzing a DBDJpx Loader](malware-analysis/2026-11-13-dbdaxera-updater.md)
+* [DLL Side-loading: Analyzing a WandEnhancer Patcher](malware-analysis/2026-11-13-wandenhancer.md)
 * [AppDomain Hijacking: Analyzing a LNK malware](malware-analysis/2026-11-13-lnk-appdomain-hijack.md)
 
 ## Windows
 
 * [Overview](windows/overview.md)
-* [UAC Bypass through CMSTPLUA: What the Two DLLs Actually Do](windows/2026-11-13-uac-bypass-cmstplua.md)
+* [UAC Bypass: Analyzing the CMSTPLUA COM Object](windows/2026-11-13-uac-bypass-cmstplua.md)
 
 ## CTF Writeups
 
