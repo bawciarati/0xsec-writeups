@@ -82,7 +82,7 @@ Syncing only fills the editor. Nothing is on the public web until you publish:
 Before publishing, check the preview:
 
 - [ ] Homepage shows About Me (not an empty page)
-- [ ] Sidebar lists: About Me, Malware Analysis, Windows & AD, CTF Writeups, Blogs
+- [ ] Sidebar lists: About Me, Malware Analysis, Windows, CTF Writeups, Blogs
 - [ ] The DBDJpx post renders its logo image
 - [ ] The TL;DR renders as a coloured callout, not raw `{% hint %}` text
 - [ ] The mermaid diagram renders as a diagram

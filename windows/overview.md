@@ -1,6 +1,6 @@
-# Windows & AD
+# Windows
 
-Windows internals and Active Directory. The parts you never need until you're staring at a process that shouldn't be running as SYSTEM.
+Windows internals. The parts you never need until you're staring at a process that shouldn't be running as SYSTEM.
 
 ## Posts
 
@@ -10,7 +10,6 @@ Windows internals and Active Directory. The parts you never need until you're st
 
 - Tokens, integrity levels, and which privileges malware asks for first
 - LOLBins that still work in 2026
-- AD: Kerberos, delegation, certificate abuse
 
 ## Ground rule
 

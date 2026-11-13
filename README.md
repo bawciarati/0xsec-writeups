@@ -33,7 +33,7 @@ Rules are written from the sample's bytes rather than from recovered plaintext, 
 | Section | What goes there |
 | --- | --- |
 | Malware Analysis | Loaders, stealers, RATs, string obfuscation, C2, persistence, detection rules |
-| Windows & AD | Internals, privilege escalation, COM, UAC, LOLBins |
+| Windows | Internals, privilege escalation, COM, UAC, LOLBins |
 | CTF Writeups | How I got there, including the dead ends |
 | Blogs | Everything that doesn't fit above |
 
