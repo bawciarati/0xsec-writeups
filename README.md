@@ -8,7 +8,7 @@
 หน้านี้คือสมุดจดของผม — ทุกโพสต์เขียนจากการวิเคราะห์จริงในเครื่องตัวเอง ไม่ใช่การสรุปจากบทความคนอื่น ถ้าผมไม่รู้ ผมจะเขียนว่าไม่รู้
 
 {% hint style="info" %}
-**Contact:** [bpieckrafale@hotmail.com](mailto:bpieckrafale@hotmail.com) · GitHub [`bpiecks`](https://github.com/bpiecks) · X [`@bpiecks`](https://x.com/bpiecks)
+**Contact:** [bpieckrafale@hotmail.com](mailto:bpieckrafale@hotmail.com) · GitHub [`bawciarati`](https://github.com/bawciarati)
 {% endhint %}
 
 ## Projects

@@ -27,7 +27,7 @@
 ```powershell
 cd "C:\Users\bpiec\OneDrive\Documents\Default Project\sec-writeups"
 
-git remote add origin https://github.com/bpiecks/0xsec-writeups.git
+git remote add origin https://github.com/bawciarati/0xsec-writeups.git
 git branch -M main
 git push -u origin main
 ```
@@ -105,14 +105,16 @@ GitBook จะ sync ภายในไม่กี่วินาที
 
 | ค่า | ใช้ที่ |
 | --- | --- |
-| `bpiecks` (แฮนเดิล) | `README.md` (GitHub + X), `meta.author` ในกฎ YARA |
+| `bpiecks` | ชื่อที่ใช้เขียนโพสต์ (`meta.author` ในกฎ YARA) |
+| [`bawciarati`](https://github.com/bawciarati) | GitHub (Contact ใน `README.md`, remote ของ repo) |
 | `bpieckrafale@hotmail.com` | `README.md` (Contact) |
 | `https://bpiecks.gitbook.io/bpiecks/…` | `meta.reference` ของกฎ YARA |
 
-**สิ่งที่ต้องเช็กเอง 2 อย่าง:**
+**สิ่งที่ต้องเช็กเอง 1 อย่าง:**
 
-1. **X handle** — ผมใส่ `https://x.com/bpiecks` ตามที่บอก แต่ถ้าบัญชี X ของคุณชื่ออื่น ให้แก้บรรทัด Contact ใน `README.md` (หรือลบส่วน X ออก)
-2. **GitBook URL** — `meta.reference` เดาโครงเป็น `bpiecks.gitbook.io/bpiecks/...` ถ้าคุณตั้งชื่อ space ไม่ใช่ `bpiecks` ให้แก้ URL ในกฎ YARA ให้ตรง (เปลี่ยนแค่บรรทัด `reference`)
+- **GitBook URL** — `meta.reference` เดาโครงเป็น `bpiecks.gitbook.io/bpiecks/...` ถ้าคุณตั้งชื่อ space ไม่ใช่ `bpiecks` ให้แก้ URL ในกฎ YARA ให้ตรง (เปลี่ยนแค่บรรทัด `reference`)
+
+ไม่ได้ใส่ลิงก์ X ไว้ (ตามที่สั่งลบ) ถ้าภายหลังอยากเพิ่ม ให้เติมต่อท้ายบรรทัด Contact ใน `README.md`
 
 ตรวจว่าไม่มี placeholder หลุด:
 
