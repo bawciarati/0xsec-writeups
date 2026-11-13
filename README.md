@@ -12,7 +12,7 @@ I publish as `bpiecks`.
 
 ## Posts
 
-### [DBDAxera: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
+### [DBDJpx: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
 
 A game-cheat loader that pulls its payload from a Railway host, compares version strings with `std::string::find`, and runs the download as Administrator. No hash check anywhere in the chain.
 

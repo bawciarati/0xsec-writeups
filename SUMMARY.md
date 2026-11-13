@@ -4,7 +4,7 @@
 
 ## Malware Analysis
 
-* [DBDAxera: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
+* [DBDJpx: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
 
 ## Windows & AD
 

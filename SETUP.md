@@ -83,7 +83,7 @@ Before publishing, check the preview:
 
 - [ ] Homepage shows About Me (not an empty page)
 - [ ] Sidebar lists: About Me, Malware Analysis, Windows & AD, CTF Writeups, Blogs
-- [ ] The DBDAxera post renders its logo image
+- [ ] The DBDJpx post renders its logo image
 - [ ] The TL;DR renders as a coloured callout, not raw `{% hint %}` text
 - [ ] The mermaid diagram renders as a diagram
 
@@ -138,7 +138,7 @@ GitBook picks the commit up within seconds.
 | `bpieckrafale@hotmail.com` | `README.md` (Contact) |
 | `https://bpiecks.gitbook.io/bpiecks/…` | `meta.reference` in YARA rules |
 
-If you change the GitBook subdomain or space path, update `meta.reference` in `detections/dbdaxera_updater.yar` — it is the only place the published URL is hardcoded.
+If you change the GitBook subdomain or space path, update `meta.reference` in `detections/dbdjpx_updater.yar` — it is the only place the published URL is hardcoded.
 
 Check that no placeholder text survived:
 

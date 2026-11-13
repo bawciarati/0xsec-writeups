@@ -1,7 +1,7 @@
 /*
-    DBDAxera updater / loader
+    DBDJpx updater / loader
     -------------------------
-    Sample : DBDAxera.exe
+    Sample : DBDJpx.exe
     SHA-256: 384843fc7cd08d6bfab36c3e3bde1aa33986ccfa940eadea3a59aef957c08546
     Build  : 2026-07-25 10:04:23 UTC (TimeDateStamp 0x6A648A27)
 
@@ -23,15 +23,15 @@
     delete $enc_query - the rule still fires without it.
 
     Validate before deploying:
-        yara -r dbdaxera_updater.yar <sample-dir>
+        yara -r dbdjpx_updater.yar <sample-dir>
 */
 
 import "pe"
 
-rule MAL_Loader_DBDAxera_Updater
+rule MAL_Loader_DBDJpx_Updater
 {
     meta:
-        description = "DBDAxera updater/loader: XOR-obfuscated strings, URLMON downloader, elevated launcher in C:\\Windows\\Temp"
+        description = "DBDJpx updater/loader: XOR-obfuscated strings, URLMON downloader, elevated launcher in C:\\Windows\\Temp"
         author      = "bpiecks"
         date        = "2026-11-13"
         reference   = "https://bpiecks.gitbook.io/bpiecks/malware-analysis/2026-11-13-dbdaxera-updater"
@@ -81,10 +81,10 @@ rule MAL_Loader_DBDAxera_Updater
     scope it to unsigned, unsigned+manifest, or user-writable directories.
 */
 
-rule MAL_Loader_DBDAxera_Family_Hunt
+rule MAL_Loader_DBDJpx_Family_Hunt
 {
     meta:
-        description = "Hunt: unsigned x64 PE with URLMON!URLDownloadToFileA + elevated manifest (DBDAxera-style loader family)"
+        description = "Hunt: unsigned x64 PE with URLMON!URLDownloadToFileA + elevated manifest (DBDJpx-style loader family)"
         author      = "bpiecks"
         date        = "2026-11-13"
         tlp         = "CLEAR"
