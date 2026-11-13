@@ -6,7 +6,7 @@
 
 * [DBDJpx: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
 * [WandEnhancer: Patching Another App's Fuses](malware-analysis/2026-11-13-wandenhancer.md)
-* [A LNK, a Signed .NET Binary, and One XML File](malware-analysis/2026-11-13-lnk-appdomain-hijack.md)
+* [AppDomain Hijacking: Analyzing a LNK malware](malware-analysis/2026-11-13-lnk-appdomain-hijack.md)
 
 ## Windows
 
