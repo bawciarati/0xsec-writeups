@@ -1,46 +1,46 @@
 # Style Guide
 
-กติกาการเขียนสำหรับบล็อกนี้ — เขียนไว้เพื่อให้โพสต์ที่ 20 เหมือนโพสต์ที่ 1 และเพื่อไม่ให้ตัวเองเผลอเขียนอะไรที่ฟังดูดีแต่ตรวจไม่ได้
+Writing rules for this site — so post 20 reads like post 1, and so I never publish something that sounds confident but cannot be checked.
 
-## 1. หลักการใหญ่
+## 1. Core principles
 
-1. **เขียนจากของจริง** ถ้ายังไม่ได้แกะ ยังไม่ต้องเขียน ถ้าอ่านจากที่อื่น ให้บอกว่าเป็น secondary source
-2. **แยกให้ชัดระหว่าง "เห็น" กับ "เดา"** — ใช้ภาษาต่างกัน:
-   - เห็น: *"ยืนยันจาก…"*, *"xref ที่ `0x…` ชี้ไปที่…"*
-   - เดา: *"น่าจะ…"*, *"อนุมานจาก…"*, *"ยืนยันไม่ได้เพราะ…"*
-3. **ไม่แต่งแฮช ไม่แต่งแอดเดรส ไม่แต่ง IOC** ถ้าไม่มี ให้เขียนว่าไม่มี
-4. **ทุกโพสต์ต้องมีข้อจำกัด** — ส่วนที่สั้นที่สุดแต่มักมีค่าที่สุด
+1. **Write from the artefact.** If I haven't taken it apart, I don't write the post yet. If I'm relying on someone else's work, say so — it's a secondary source.
+2. **Separate "observed" from "inferred".** Use different wording:
+   - Observed: *"confirmed from…"*, *"the xref at `0x…` points to…"*
+   - Inferred: *"probably"*, *"inferred from…"*, *"could not confirm because…"*
+3. **Never invent a hash, an address, or an IOC.** If it isn't there, say it isn't there.
+4. **Every post has a Limitations section.** It's the shortest section and usually the most valuable.
 
-## 2. ภาษา
+## 2. Language
 
-- เนื้อหาหลัก **ภาษาไทย** ศัพท์เทคนิคคงภาษาอังกฤษ (ไม่แปล `import table`, `persistence`, `shellcode`)
-- **ชื่อโพสต์ (H1) เป็นภาษาอังกฤษ** เพื่อ SEO และให้ตรงกับ slug
-- ขึ้นต้นด้วย **TL;DR ภาษาอังกฤษ** หนึ่งย่อหน้า แล้วค่อยเข้าเนื้อหาภาษาไทย
-- เขียนแบบเพื่อนอธิบายให้เพื่อนฟัง ไม่ใช่รายงานราชการ: ประโยคสั้น ขึ้นบรรทัดใหม่เมื่อขึ้นความคิดใหม่
-- หลีกเลี่ยงคำฟุ่มเฟือย: "จะเห็นได้ว่า", "อย่างที่ทราบกันดี", "น่าสนใจเป็นอย่างยิ่ง"
+- **Everything published is English.** No mixed-language posts.
+- **British spelling**, consistently: *analyse, analysed, behaviour, defence, organisation* (but keep API names and product names exactly as shipped, e.g. `InitializeSecurityContext`).
+- Technical terms stay as they are — don't translate `import table`, `persistence`, `shellcode`, `unpacking`.
+- Write like one engineer explaining a finding to another, not like a report: short sentences, new paragraph when the idea changes.
+- Cut filler: "it is worth noting that", "as we all know", "very interesting".
 
-## 3. โครงโพสต์
+## 3. Post structure
 
-ใช้ลำดับนี้ (ข้ามได้ถ้าไม่มีข้อมูล แต่**ห้ามสลับ**):
+Use this order (skip a section only if there is genuinely no data; **never reorder**):
 
-| # | Section | จำเป็น |
+| # | Section | Required |
 | --- | --- | --- |
 | 1 | Front matter + H1 | ✅ |
 | 2 | Metadata table (hash, size, format, signed, analysis method) | ✅ |
-| 3 | TL;DR (EN, ในการ์ด `hint`) | ✅ |
-| 4 | ทำไมเรื่องนี้ถึงน่าสนใจ | ✅ |
-| 5 | Static triage / โครงสร้าง | ✅ |
-| 6 | เนื้อหาหลัก (obfuscation, C2, flow, …) | ✅ |
+| 3 | TL;DR (single paragraph, inside a `hint`) | ✅ |
+| 4 | Why this one is interesting | ✅ |
+| 5 | Static triage / structure | ✅ |
+| 6 | Main content (obfuscation, C2, flow, …) | ✅ |
 | 7 | IOC | ✅ |
-| 8 | Detection (YARA + hunting) | ✅ ถ้ามีกฎ |
+| 8 | Detection (YARA + hunting) | if there's a rule |
 | 9 | ATT&CK mapping | ✅ |
-| 10 | ข้อจำกัด | ✅ |
-| 11 | สรุป | ✅ |
-| 12 | Appendix (address map, raw bytes, scripts) | ถ้ามี |
+| 10 | Limitations | ✅ |
+| 11 | Closing | ✅ |
+| 12 | Appendix (address map, raw bytes, scripts) | if relevant |
 
 ## 4. Metadata table
 
-ต้องมีทุกโพสต์ และต้องตอบได้ว่า "ถ้าฉันมีไฟล์นี้ ฉันจะรู้ได้ไหมว่าคือตัวเดียวกัน"
+Every post needs one, and it must answer: *if I have this file, can I tell whether it's the same one?*
 
 ```markdown
 |  |  |
@@ -53,32 +53,32 @@
 | **Analysis** | static only / sandbox / dynamic |
 ```
 
-## 5. รูปแบบเฉพาะ
+## 5. Specific conventions
 
-### แอดเดรสและออฟเซ็ต
+### Addresses and offsets
 
-- แอดเดรส VA ของ x64 เขียนเต็มพร้อม backtick: `` `0x140002fdd` ``
-- file offset เขียนเป็น hex: `0x92A8` — และบอกให้ชัดว่าเป็น file offset ไม่ใช่ VA
-- ถ้าอ้างฟังก์ชันที่ยังไม่ได้เปลี่ยนชื่อ ใช้ชื่อที่ decompiler ตั้ง: `FUN_140004fb0` อย่าเดาชื่อสวย ๆ
+- x64 virtual addresses: full width, in backticks — `` `0x140002fdd` ``
+- File offsets: hex, and always label which one it is (`file offset 0x92A8`, not `VA 0x92A8`)
+- Unrenamed functions keep the decompiler's name: `FUN_140004fb0`. Don't invent prettier names.
 
-### ไบต์และ pattern
+### Bytes and patterns
 
-- hex เขียนเป็นกลุ่มละ 2 ตัว คั่นด้วยช่องว่าง ขึ้นบรรทัดใหม่ทุก ~20 ไบต์
-- ถ้าเป็น pattern สำหรับ YARA ต้องเป็นไบต์ที่ **มีจริงในไฟล์** และควรมีไบต์ปิดท้าย/NUL ติดมาด้วยเพื่อลด false positive
+- Hex in two-digit groups separated by spaces, wrapped at ~20 bytes per line
+- A YARA pattern must be bytes that **actually exist in the file**, and should include the trailing NUL / terminator where one exists, to reduce false positives
 
 ### IOC
 
-- โดเมน/IP ทำ defang: `hxxps://host[.]tld/path`
-- เก็บเป็น code block เพื่อให้คัดลอกได้ ไม่ใช่ตาราง
-- แยกกลุ่ม: Network / Host / File
+- Defang domains and IPs: `hxxps://host[.]tld/path`
+- Keep IOCs in code blocks so they copy cleanly, not in tables
+- Group them: Network / Host / File
 
-### ลิงก์ในเว็บ
+### Links and images
 
-- ใช้ relative path: `[กฎ YARA](../detections/x.yar)`
-- รูปใน `assets/` ใช้ relative path เช่นกัน (`../assets/…`) เพื่อให้ preview ใน GitHub ทำงานด้วย
-- anchor ของหัวข้อ: GitBook สร้างจากหัวข้อภาษาอังกฤษ — ผูก anchor ด้วยภาษาอังกฤษเท่านั้น
+- Relative paths inside the site: `[YARA rule](../detections/x.yar)`
+- Images live in `assets/` and are linked relatively (`../assets/…`) so they also render on GitHub
+- GitBook builds heading anchors from English headings — only link anchors that exist
 
-### กล่องข้อความ (GitBook blocks)
+### Callout blocks
 
 ```
 {% hint style="info" %} … {% endhint %}
@@ -87,11 +87,11 @@
 {% hint style="success" %} … {% endhint %}
 ```
 
-ใช้ `warning` สำหรับคำเตือนด้านความปลอดภัย, `info` สำหรับ TL;DR/หมายเหตุ, `danger` สำหรับ "อย่ารันสิ่งนี้"
+Use `info` for TL;DR / notes, `warning` for security caveats and inference warnings, `danger` for "do not run this".
 
-**ทำไมใช้ `{% hint %}` และไม่ใช้ blockquote `>`** — ตัดสินใจแล้ว (พ.ย. 2026): GitBook คือหน้าตาจริงที่คนอ่าน จึงเลือกของที่ GitBook รองรับเต็มที่ ยอมรับผลข้างเคียงว่าเวลาเปิดไฟล์เดียวกันบน GitHub จะเห็นแท็ก `{% hint %}` เป็นข้อความดิบ **อย่าเปลี่ยนเป็น blockquote เพื่อให้ GitHub สวย** เพราะจะทำให้เว็บเสียกล่องสี/ไอคอนไปทั้งบล็อก
+**Why `{% hint %}` and not a blockquote `>`** — decided Nov 2026: GitBook is the surface readers actually use, so use the block GitBook renders best. Accept the side effect that the same file on GitHub shows the `{% hint %}` tags as raw text. **Do not convert them to blockquotes to make GitHub look nicer** — that costs the site its coloured callouts.
 
-## 6. ชื่อไฟล์และโฟลเดอร์
+## 6. File and folder naming
 
 ```
 malware-analysis/YYYY-MM-DD-slug.md
@@ -102,24 +102,24 @@ detections/<family>_<what>.yar
 assets/<family>-<what>.png
 ```
 
-- slug ภาษาอังกฤษ ตัวพิมพ์เล็ก คั่นด้วย `-`
-- วันที่ในชื่อไฟล์ = วันที่โพสต์ (ไม่ใช่วันที่เก็บตัวอย่าง) และต้องตรงกับในเนื้อหา
-- หลังเพิ่มไฟล์ **ต้องอัปเดต `SUMMARY.md`** ไม่งั้นหน้านั้นจะไม่ขึ้นในเมนู
+- Slugs are lowercase English, hyphen-separated
+- The date in the filename is the publish date (not the date the sample was collected) and must match the post body
+- After adding a file, **update `SUMMARY.md`** or it will not appear in the sidebar
 
-## 7. โทนเสียง
+## 7. Voice
 
-- มั่นใจได้ แต่ไม่โอ้อวด — "ผมทำแบบนี้เพราะ…" ดีกว่า "วิธีที่ถูกต้องคือ…"
-- ยอมรับทางตัน: การเขียนว่าลองอะไรแล้วไม่ work มีค่ากว่าการเขียนแค่ทางที่สำเร็จ
-- ไม่พูดถึงเหยื่อ/บุคคลจริงในทางเสียหาย และไม่ลงรายละเอียดที่ทำให้คนอ่านทำตามได้ในทันที (เช่น สคริปต์ที่ยิง C2 จริง)
-- ถ้าตัวอย่างเป็นของลูกค้า/ที่ทำงาน: ปิดแฮช ปิดโดเมน และบอกว่า anonymize แล้ว
+- Confident but not boastful — "I did it this way because…" beats "the correct way is…"
+- Admit dead ends: writing about what didn't work is worth more than only showing what did
+- Never name or shame victims, and don't publish anything that lets a reader reproduce an attack in one step (e.g. a working C2 client)
+- Client/work samples: strip hashes and domains, and say they were anonymised
 
-## 8. Checklist ก่อน publish
+## 8. Pre-publish checklist
 
-- [ ] แฮชตรงกับไฟล์ที่ใช้จริง (คำนวณซ้ำ)
-- [ ] ทุกแอดเดรส/ออฟเซ็ตอ้างอิงได้จากเครื่องมือ
-- [ ] ทุก YARA pattern มีอยู่จริงในไฟล์ตัวอย่าง (เทสต์ด้วย `yara`)
-- [ ] ส่วน "ข้อจำกัด" เขียนแล้ว และไม่ได้ทำให้ดูปลอดภัยกว่าความเป็นจริง
-- [ ] IOC ทำ defang แล้ว
-- [ ] ลิงก์ relative ทั้งหมดเปิดได้
-- [ ] อัปเดต `SUMMARY.md` แล้ว
-- [ ] ไม่มี placeholder (`YOURNAME`, `0xYOURHANDLE`) หลุดในโพสต์
+- [ ] Hash recomputed against the actual file
+- [ ] Every address/offset traceable to a tool or an xref
+- [ ] Every YARA pattern verified to exist in the sample (`yara` run locally)
+- [ ] Limitations written, and the post doesn't read as safer than reality
+- [ ] IOCs defanged
+- [ ] All relative links resolve
+- [ ] `SUMMARY.md` updated
+- [ ] No placeholder text (`YOURNAME`, `0xYOURHANDLE`, `TODO`) left in a post

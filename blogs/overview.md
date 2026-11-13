@@ -1,11 +1,11 @@
 # Blogs
 
-บันทึกที่ไม่เข้าหมวดไหน — เครื่องมือที่ใช้, วิธีตั้ง lab, สิ่งที่เจอระหว่างทาง, และความคิดเห็นเรื่องความปลอดภัย
+Notes that don't fit anywhere else — the tools I use, how I set up a lab, what I found along the way, and opinions about security.
 
-## ที่จะเขียน
+## Planned
 
-- วิธีตั้ง malware analysis lab ที่ปลอดภัยพอจะรันของจริง
-- เครื่องมือที่ผมใช้จริง (และตัวที่เลิกใช้ เพราะอะไร)
-- note สั้น ๆ จากการอ่าน CVE / patch diff
+- Building a malware analysis lab safe enough to run real samples
+- Tools I actually use (and the ones I dropped, and why)
+- Short notes from reading a CVE or a patch diff
 
-โพสต์สั้น ๆ ที่ไม่ต้องมีโครง writeup ก็อยู่ที่นี่
+Short posts that don't deserve a full writeup structure live here.

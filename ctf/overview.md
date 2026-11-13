@@ -1,16 +1,16 @@
 # CTF Writeups
 
-เขียนเฉพาะโจทย์ที่ผมแก้ได้ด้วยตัวเอง และเขียน **วิธีคิด** ไม่ใช่แค่ flag — รวมถึงทางตันที่ลองแล้วไม่ work เพราะส่วนนั้นคือส่วนที่คนอ่านได้ประโยชน์จริง ๆ
+Only challenges I actually solved myself, and I write about the **thinking**, not just the flag — including the dead ends, because the dead ends are the part a reader can learn from.
 
-## รูปแบบที่จะใช้
+## Format
 
-1. โจทย์บอกอะไร / ให้อะไรมา
-2. ข้อมูลที่ดูเผิน ๆ แล้วไม่สำคัญ แต่จริง ๆ สำคัญ
-3. ทางที่ลองแล้วไม่work (สรุปสั้น ๆ)
-4. ทางที่ work — พร้อมคำสั่ง/สคริปต์ที่รันได้จริง
-5. บทเรียนที่เอาไปใช้กับโจทย์อื่นได้
+1. What the challenge gives you
+2. The detail that looks irrelevant and turns out not to be
+3. Approaches that didn't work (briefly)
+4. The approach that did — with commands/scripts you can actually run
+5. What carries over to the next challenge
 
-## หมายเหตุ
+## Notes
 
-- จะไม่เขียน flag เต็มในโพสต์สาธารณะสำหรับ competition ที่ยังไม่จบ
-- สคริปต์ที่ใช้จะอยู่ในโฟลเดอร์ `assets/` ของ repo นี้ ไม่ใช่ลิงก์ตาย
+- No full flags for competitions that are still running
+- Scripts live in this repo's `assets/`, not behind dead links

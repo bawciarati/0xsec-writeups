@@ -1,11 +1,11 @@
 ---
-description: One-line English summary of what this post proves. This is what shows up in search results and social cards.
+description: One-line English summary of what this post proves. This is what appears in search results and social cards.
 ---
 
 # Sample Name: What It Actually Does
 
 {% hint style="info" %}
-**TL;DR (EN).** Two to four sentences: what the file is, how it is obfuscated, what it does at runtime, and the single most important security finding. No code, no hedging — just the conclusion.
+**TL;DR.** Two to four sentences: what the file is, how it is obfuscated, what it does at runtime, and the single most important security finding. No code, no hedging — just the conclusion.
 {% endhint %}
 
 |  |  |
@@ -20,9 +20,9 @@ description: One-line English summary of what this post proves. This is what sho
 
 ---
 
-## ทำไมตัวนี้ถึงน่าสนใจ
+## Why this one is interesting
 
-ย่อหน้าเดียว: จุดที่ทำให้ตัวนี้ควรค่าแก่การเขียน — พฤติกรรมแปลก, เทคนิคใหม่, หรือช่องโหว่เชิงออกแบบ
+One paragraph: the thing that makes it worth writing about — unusual behaviour, a new technique, or a design flaw.
 
 ## Static triage
 
@@ -33,23 +33,23 @@ KERNEL32.dll
   …
 ```
 
-อธิบายว่า import สั้น/ยาวแบบนี้บอกอะไร และอะไรที่ *ไม่มี* (เช่น ไม่มี `advapi32` → ไม่มี persistence)
+What this import list implies, and what is notably *absent* (e.g. no `advapi32` → no persistence).
 
 ### Sections / resources
 
-ตารางหรือรายการ พร้อมข้อสังเกต (entropy, overlay, resource แปลก ๆ)
+Table or list, plus observations (entropy, overlay, odd resources).
 
 ### Build artifacts
 
-PDB path, compiler hints, timestamps ที่ผู้เขียนลืมลบ
+PDB path, compiler hints, timestamps the author forgot to strip.
 
-## เนื้อหาหลัก
+## Main content
 
-*(เลือกหัวข้อที่ตรงกับเคส — obfuscation scheme, C2 protocol, persistence, injection, …)*
+*(pick the headings that fit the case — obfuscation scheme, C2 protocol, persistence, injection, …)*
 
 ### Obfuscation
 
-อธิบายอัลกอริทึม + snippet ที่รันได้จริง:
+Explain the algorithm, then show something runnable:
 
 ```c
 for (size_t i = 0; i < len; i++)
@@ -97,32 +97,32 @@ rule …
 
 ### Hunting
 
-| แหล่งข้อมูล | เงื่อนไขที่มอง |
+| Source | Condition to look for |
 | --- | --- |
 | Sysmon EID 1 | … |
 
 ## MITRE ATT&CK
 
-| Technique | ID | หลักฐาน |
+| Technique | ID | Evidence |
 | --- | --- | --- |
 | … | [T…](https://attack.mitre.org/techniques/T…/) | … |
 
-**ไม่พบ:** …
+**Not observed:** …
 
-## ข้อจำกัด
+## Limitations
 
 1. …
 2. …
 
-## สรุป
+## Closing
 
-ย่อหน้าปิด: บทเรียนที่เอาไปใช้กับเคสอื่นได้ ไม่ใช่สรุปซ้ำ
+One paragraph: the lesson that transfers to other cases, not a restatement of the summary.
 
 ---
 
 ## Appendix A — Address map
 
-| Address | สิ่งที่อยู่ตรงนั้น |
+| Address | What lives there |
 | --- | --- |
 | `0x…` | … |
 

@@ -1,11 +1,11 @@
 # License
 
-| สิ่งที่อยู่ใน repo นี้ | สัญญาอนุญาต |
+| Content in this repo | License |
 | --- | --- |
-| บทความ, โน้ต, ไดอะแกรม (`*.md`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — ใช้/ดัดแปลง/แชร์ได้ ให้เครดิตและลิงก์กลับ |
-| กฎตรวจจับ (`detections/*.yar`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — เอาไปใช้ใน ruleset เชิงพาณิชย์ได้ ให้คง `meta.author` ไว้ |
-| ภาพ/โลโก้ (`assets/`) | © เจ้าของเดิมของภาพ ใช้ในบริบทการวิเคราะห์เพื่อการศึกษาเท่านั้น |
+| Posts, notes, diagrams (`*.md`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — reuse and adapt freely, with attribution and a link back |
+| Detection rules (`detections/*.yar`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — usable in commercial rulesets, keep `meta.author` intact |
+| Images and logos (`assets/`) | © their original owner; used here for analysis and educational commentary only |
 
-**ไม่รวมอยู่ในสัญญาอนุญาต:** แฮช, ที่อยู่หน่วยความจำ, ไบต์ของตัวอย่าง, และ IOC — ข้อมูลเชิงข้อเท็จจริงเหล่านี้ไม่สามารถมีลิขสิทธิ์ได้
+**Not covered by the license:** hashes, memory addresses, sample bytes and IOCs — factual data of this kind cannot be copyrighted.
 
-**ตัวอย่าง malware ไม่ได้ถูกเผยแพร่ใน repo นี้** และจะไม่ถูกเผยแพร่ ถ้าต้องการไฟล์เพื่อทดสอบ ให้ขอจากแหล่งที่เชื่อถือได้และรันใน lab ที่ตัดเน็ตเวิร์ก
+**No malware samples are published in this repo, and none will be.** If you need a file to test with, get it from a reputable source and run it in a network-isolated lab.
