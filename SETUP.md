@@ -38,24 +38,36 @@ git push -u origin main
 
 ## 2. เชื่อม GitBook กับ repo (Git Sync)
 
-1. เข้า gitbook.com → สร้าง **organization** (หรือใช้ที่มีอยู่)
-2. สร้าง **space** ใหม่ ตั้งชื่อ เช่น `bpiecks` — ชื่อนี้จะกลายเป็น slug ของ URL (`bpiecks.gitbook.io/bpiecks`)
-3. ใน space → **Settings → Git Sync** (หรือ Integrations → GitHub)
-4. ติดตั้ง **GitBook GitHub App** ให้เข้าถึง repo ที่สร้างในข้อ 1
-5. เลือก repo + branch `main`
-6. **Project directory**: เว้นว่าง (repo root) —เพราะ `.gitbook.yaml` ตั้ง `root: ./` ไว้แล้ว
-7. กด **Sync**
+GitBook ปัจจุบันตั้ง Git Sync ที่ **ระดับ site** (ไม่ใช่ระดับ space) — หนึ่ง connection ต่อ site หนึ่ง repo หนึ่ง branch
+ตัวที่บอกว่า space ไหนอ่านโฟลเดอร์ไหน คือ `gitbook-docs.yaml` ที่ root ของ repo (มีอยู่แล้วในโปรเจกต์นี้)
+
+1. เข้า gitbook.com → สร้าง **organization** (ตั้งชื่อ org เป็น `bpiecks` จะได้ subdomain `bpiecks.gitbook.io`)
+2. สร้าง **site** ใหม่ ตั้งชื่อ `bpiecks`
+3. ใน site → **Git Sync** (แถบซ้าย) → **Connect GitHub**
+4. ติดตั้ง **GitBook GitHub App** เลือก **Only select repositories** → `bawciarati/0xsec-writeups`
+5. **Source repository**: `0xsec-writeups`, branch `main`
+6. **Initial sync direction**: เลือก **GitHub → GitBook** (repo เป็น source of truth — space ยังว่าง ไม่มีอะไรหาย)
+7. **Project directory**: เว้นว่าง (repo root) — ที่เดียวกับ `gitbook-docs.yaml`
+8. **Content mapping**: ตรวจว่ามีบรรทัด `bpiecks` → `./` (GitBook อ่านจาก `gitbook-docs.yaml` ให้อัตโนมัติ)
+9. กด **Sync**
+
+{% hint style="warning" %}
+ถ้าเจอ error **`gitbook-docs.yaml does not exist on this branch`** แปลว่า repo ยังไม่มีไฟล์นี้ — ไฟล์ถูกเพิ่มให้แล้วใน commit ที่เพิ่ม `gitbook-docs.yaml` ให้ตรวจว่า push ขึ้น GitHub แล้ว แล้วกด Sync ซ้ำ
+{% endhint %}
 
 หลัง sync ครั้งแรก GitBook จะอ่าน:
 
 | ไฟล์ | หน้าที่ |
 | --- | --- |
+| `gitbook-docs.yaml` | site ประกอบด้วย space อะไร, space ไหนอ่านโฟลเดอร์ไหน |
 | `README.md` | หน้าแรกของ space (About Me) |
 | `SUMMARY.md` | เมนูด้านซ้ายทั้งหมด |
 | `.gitbook.yaml` | บอกว่า root อยู่ไหน, หน้าแรกชื่ออะไร, เมนูชื่ออะไร |
 
 ไฟล์ที่ **ไม่อยู่ใน** `SUMMARY.md` (`SETUP.md`, `STYLE-GUIDE.md`, `templates/`, `detections/`) จะไม่ขึ้นในเมนู
 `detections/*.yar` ยังเข้าถึงได้ทาง URL ตรง ๆ และลิงก์จากโพสต์ยังทำงาน
+
+**ห้ามเปลี่ยน `key:` ใน `gitbook-docs.yaml`** หลัง sync ครั้งแรก — GitBook ถือว่า key ใหม่ = space ใหม่ (space ID ใหม่) ลิงก์เดิมจะพังทันที ถ้าอยากเปลี่ยนชื่อ ให้แก้ `title:` เท่านั้น
 
 ---
 

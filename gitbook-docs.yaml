@@ -1,0 +1,18 @@
+# Site-level Git Sync config. GitBook reads this file from the "Project directory"
+# (repo root here). One space, mapped to the repo root.
+#
+# WARNING: never change `key` after the first sync. GitBook treats a new key as a
+# new space, with a new space ID, and links to the old one break.
+
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+
+site:
+  title: bpiecks
+  structure:
+    - type: space
+      key: bpiecks
+      title: bpiecks
+      path: bpiecks
+      default: true
+      content:
+        directory: ./
