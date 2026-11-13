@@ -1,0 +1,10 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+# When a page is renamed, keep old links alive by adding a redirect here.
+# Paths are relative to root.
+redirects:
+  # mal/wannacry: malware-analysis/2026-12-18-wannacry.md

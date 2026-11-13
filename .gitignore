@@ -1,0 +1,17 @@
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Never commit live samples or extracted payloads
+samples/
+*.exe
+*.dll
+*.bin
+*.zip
+*.7z
+
+# Local scratch
+notes/
+*.tmp
+~$*
