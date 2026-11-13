@@ -117,7 +117,9 @@ GitBook จะ sync ภายในไม่กี่วินาที
 ตรวจว่าไม่มี placeholder หลุด:
 
 ```powershell
-Select-String -Path (Get-ChildItem -Recurse -Include *.md,*.yar).FullName -Pattern "YOURNAME|0xYOURHANDLE|YOUR_EMAIL"
+Get-ChildItem -Recurse -Include *.md,*.yar |
+  Where-Object { $_.Name -notin 'SETUP.md', 'STYLE-GUIDE.md' } |
+  Select-String -Pattern "YOURNAME|0xYOURHANDLE|YOUR_EMAIL"
 ```
 
 ถ้าคำสั่งนี้ไม่คืนอะไรเลย = เรียบร้อย
