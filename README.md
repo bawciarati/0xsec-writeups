@@ -16,6 +16,10 @@ I publish as `bpiecks`.
 
 A game-cheat loader that pulls its payload from a Railway host, compares version strings with `std::string::find`, and runs the download as Administrator. No hash check anywhere in the chain.
 
+### [WandEnhancer: Patching Another App's Fuses](malware-analysis/2026-11-13-wandenhancer.md)
+
+A WeMod patcher that rewrites `app.asar`, side-loads a `version.dll` proxy to flip an Electron fuse in memory, and can open an unauthenticated panel on `0.0.0.0:3223`.
+
 ### YARA rules
 
 Rules are written from the sample's bytes rather than from recovered plaintext, because the plaintext isn't in the file. Each post links to its own rule in `detections/`.
