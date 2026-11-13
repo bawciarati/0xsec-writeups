@@ -8,7 +8,7 @@
 หน้านี้คือสมุดจดของผม — ทุกโพสต์เขียนจากการวิเคราะห์จริงในเครื่องตัวเอง ไม่ใช่การสรุปจากบทความคนอื่น ถ้าผมไม่รู้ ผมจะเขียนว่าไม่รู้
 
 {% hint style="info" %}
-**Contact:** `YOUR_EMAIL` · GitHub [`0xYOURHANDLE`](https://github.com/0xYOURHANDLE) · X [`@0xYOURHANDLE`](https://x.com/0xYOURHANDLE)
+**Contact:** [bpieckrafale@hotmail.com](mailto:bpieckrafale@hotmail.com) · GitHub [`bpiecks`](https://github.com/bpiecks) · X [`@bpiecks`](https://x.com/bpiecks)
 {% endhint %}
 
 ## Projects
@@ -35,7 +35,3 @@ Static teardown ของ loader ที่อัปเดตตัวเอง�
 - ทุกตัวอย่างวิเคราะห์แบบ **static** ก่อนเสมอ ถ้าต้องรัน จะรันใน VM ที่แยกจากเน็ตเวิร์กจริง
 - แฮช, แอดเดรส, และออฟเซ็ตที่ลงในโพสต์คือค่าที่ตรวจแล้ว ไม่ใช่ค่าที่เดาจาก knowledge cutoff
 - ไม่มีโพสต์ไหนบอกให้คุณรันอะไรบนเครื่องจริง — ตัวอย่างเป็นอันตราย
-
-{% hint style="warning" %}
-หน้านี้อยู่ในระหว่างเริ่มต้น: บางลิงก์/ชื่อยังเป็น placeholder (`YOURNAME`, `0xYOURHANDLE`) รอแทนที่
-{% endhint %}

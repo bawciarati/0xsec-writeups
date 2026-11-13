@@ -27,7 +27,7 @@
 ```powershell
 cd "C:\Users\bpiec\OneDrive\Documents\Default Project\sec-writeups"
 
-git remote add origin https://github.com/0xYOURHANDLE/0xsec-writeups.git
+git remote add origin https://github.com/bpiecks/0xsec-writeups.git
 git branch -M main
 git push -u origin main
 ```
@@ -39,7 +39,7 @@ git push -u origin main
 ## 2. เชื่อม GitBook กับ repo (Git Sync)
 
 1. เข้า gitbook.com → สร้าง **organization** (หรือใช้ที่มีอยู่)
-2. สร้าง **space** ใหม่ ตั้งชื่อ เช่น `0xSec` — ชื่อนี้จะกลายเป็น slug ของ URL
+2. สร้าง **space** ใหม่ ตั้งชื่อ เช่น `bpiecks` — ชื่อนี้จะกลายเป็น slug ของ URL (`bpiecks.gitbook.io/bpiecks`)
 3. ใน space → **Settings → Git Sync** (หรือ Integrations → GitHub)
 4. ติดตั้ง **GitBook GitHub App** ให้เข้าถึง repo ที่สร้างในข้อ 1
 5. เลือก repo + branch `main`
@@ -65,7 +65,7 @@ git push -u origin main
 
 - **Settings → Branding**: logo, favicon, สี
 - **Settings → Themes**: โหมดสว่าง/มืด (0xSec ใช้ธีมมืด)
-- **Settings → Domain**: ใส่ subdomain ฟรี `yourname.gitbook.io` หรือ custom domain
+- **Settings → Domain**: ใส่ subdomain ฟรี `bpiecks.gitbook.io` หรือ custom domain
 - **Settings → Social preview**: รูปตอนแชร์ลิงก์
 - ปิด **suggest edits / comments** ถ้าไม่อยากให้คนอื่นแก้
 
@@ -99,22 +99,28 @@ GitBook จะ sync ภายในไม่กี่วินาที
 
 ---
 
-## 5. ก่อน publish จริง — แทนที่ placeholder
+## 5. Identity ที่ผูกไว้แล้ว
 
-ค้นหาและแทนที่ทั้ง repo:
+ทั้งหมดนี้แทนที่ให้เรียบร้อยแล้ว — ไม่มี placeholder เหลือ:
 
-| Placeholder | แทนด้วย | อยู่ที่ |
-| --- | --- | --- |
-| `YOURNAME` | ชื่อ/แฮนเดิลของคุณ | `README.md`, YARA `meta.author` |
-| `0xYOURHANDLE` | GitHub/X handle | `README.md`, ลิงก์ใน YARA `meta.reference` |
-| `YOUR_EMAIL` | อีเมลติดต่อ (หรือลบทิ้ง) | `README.md` |
+| ค่า | ใช้ที่ |
+| --- | --- |
+| `bpiecks` (แฮนเดิล) | `README.md` (GitHub + X), `meta.author` ในกฎ YARA |
+| `bpieckrafale@hotmail.com` | `README.md` (Contact) |
+| `https://bpiecks.gitbook.io/bpiecks/…` | `meta.reference` ของกฎ YARA |
+
+**สิ่งที่ต้องเช็กเอง 2 อย่าง:**
+
+1. **X handle** — ผมใส่ `https://x.com/bpiecks` ตามที่บอก แต่ถ้าบัญชี X ของคุณชื่ออื่น ให้แก้บรรทัด Contact ใน `README.md` (หรือลบส่วน X ออก)
+2. **GitBook URL** — `meta.reference` เดาโครงเป็น `bpiecks.gitbook.io/bpiecks/...` ถ้าคุณตั้งชื่อ space ไม่ใช่ `bpiecks` ให้แก้ URL ในกฎ YARA ให้ตรง (เปลี่ยนแค่บรรทัด `reference`)
+
+ตรวจว่าไม่มี placeholder หลุด:
 
 ```powershell
-# ดูว่ามีหลุดอยู่ตรงไหนบ้าง
 Select-String -Path (Get-ChildItem -Recurse -Include *.md,*.yar).FullName -Pattern "YOURNAME|0xYOURHANDLE|YOUR_EMAIL"
 ```
 
-ข้อควรระวัง: `README.md` มีลิงก์ `https://github.com/0xYOURHANDLE/0xYOURHANDLE` และ `https://x.com/0xYOURHANDLE` — ถ้าไม่ใช้ X ให้ลบบรรทัดนั้นออก
+ถ้าคำสั่งนี้ไม่คืนอะไรเลย = เรียบร้อย
 
 ---
 

@@ -32,9 +32,9 @@ rule MAL_Loader_DBDAxera_Updater
 {
     meta:
         description = "DBDAxera updater/loader: XOR-obfuscated strings, URLMON downloader, elevated launcher in C:\\Windows\\Temp"
-        author      = "YOURNAME"
+        author      = "bpiecks"
         date        = "2026-11-13"
-        reference   = "https://0xYOURHANDLE.gitbook.io/0xYOURHANDLE/malware-analysis/2026-11-13-dbdaxera-updater"
+        reference   = "https://bpiecks.gitbook.io/bpiecks/malware-analysis/2026-11-13-dbdaxera-updater"
         sha256      = "384843fc7cd08d6bfab36c3e3bde1aa33986ccfa940eadea3a59aef957c08546"
         tlp         = "CLEAR"
         confidence  = "high"
@@ -85,7 +85,7 @@ rule MAL_Loader_DBDAxera_Family_Hunt
 {
     meta:
         description = "Hunt: unsigned x64 PE with URLMON!URLDownloadToFileA + elevated manifest (DBDAxera-style loader family)"
-        author      = "YOURNAME"
+        author      = "bpiecks"
         date        = "2026-11-13"
         tlp         = "CLEAR"
         confidence  = "low"
