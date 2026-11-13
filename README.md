@@ -20,6 +20,10 @@ A game-cheat loader that pulls its payload from a Railway host, compares version
 
 A WeMod patcher that rewrites `app.asar`, side-loads a `version.dll` proxy to flip an Electron fuse in memory, and can open an unauthenticated panel on `0.0.0.0:3223`.
 
+### [A LNK, a Signed .NET Binary, and One XML File](malware-analysis/2026-11-13-lnk-appdomain-hijack.md)
+
+A shortcut that carries its own base64 payload, a Microsoft-signed ClickOnce host copied into the Startup folder, and four lines of `.exe.config` that make the CLR load a stranger's assembly before `Main` runs.
+
 ### [UAC Bypass through CMSTPLUA: What the Two DLLs Actually Do](windows/2026-11-13-uac-bypass-cmstplua.md)
 
 Where the auto-approved CLSID is registered, why `cmstplua.dll` forwards to `cmlua.dll`, and which vtable slot `ShellExec` really occupies.
