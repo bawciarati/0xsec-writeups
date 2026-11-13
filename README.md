@@ -20,6 +20,10 @@ A game-cheat loader that pulls its payload from a Railway host, compares version
 
 A WeMod patcher that rewrites `app.asar`, side-loads a `version.dll` proxy to flip an Electron fuse in memory, and can open an unauthenticated panel on `0.0.0.0:3223`.
 
+### [UAC Bypass through CMSTPLUA: What the Two DLLs Actually Do](windows/2026-11-13-uac-bypass-cmstplua.md)
+
+Where the auto-approved CLSID is registered, why `cmstplua.dll` forwards to `cmlua.dll`, and which vtable slot `ShellExec` really occupies.
+
 ### YARA rules
 
 Rules are written from the sample's bytes rather than from recovered plaintext, because the plaintext isn't in the file. Each post links to its own rule in `detections/`.

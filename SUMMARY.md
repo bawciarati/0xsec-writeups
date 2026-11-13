@@ -10,6 +10,7 @@
 ## Windows & AD
 
 * [Overview](windows/overview.md)
+* [UAC Bypass through CMSTPLUA: What the Two DLLs Actually Do](windows/2026-11-13-uac-bypass-cmstplua.md)
 
 ## CTF Writeups
 
