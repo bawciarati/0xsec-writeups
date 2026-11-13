@@ -1,41 +1,38 @@
 # About Me
 
-I'm a cybersec person who likes taking things apart — especially things with no source code. Code, protocols, binaries, weird files: I'd rather explain what they actually do than what the README says they do.
+Most of what's on this site is malware analysis. Loaders, droppers, RATs, whatever ended up in my samples folder that week. I also spend time on Windows internals, some CTFs, and the occasional web app.
 
-Most of my time goes into **malware analysis**, **reverse engineering** and **Windows internals**. Sometimes CTFs, sometimes bug hunting in web apps.
-If it's made of code, I want to know how it breaks.
+Everything here comes from a file I opened myself. If a post says a string decodes to a URL, I ran the decoder and printed the URL. If I couldn't confirm something, the post says so in a limitations section, because a writeup that hides its gaps is worse than no writeup.
 
-This site is my notebook. Every post comes from analysis I actually ran on my own machine, not from summarising someone else's article. If I don't know something, I say so.
+I publish as `bpiecks`.
 
 {% hint style="info" %}
 **Contact:** [bpieckrafale@hotmail.com](mailto:bpieckrafale@hotmail.com) · GitHub [`bawciarati`](https://github.com/bawciarati)
 {% endhint %}
 
-## Projects
+## Posts
 
-### DBDAxera — loader teardown
+### [DBDAxera: Unsigned Updater, Zero Integrity Checks](malware-analysis/2026-11-13-dbdaxera-updater.md)
 
-A static teardown of a loader that updates itself over HTTPS without validating a single hash or signature, then runs the result as Administrator — [read the full post](malware-analysis/2026-11-13-dbdaxera-updater.md)
+A game-cheat loader that pulls its payload from a Railway host, compares version strings with `std::string::find`, and runs the download as Administrator. No hash check anywhere in the chain.
 
 ### YARA rules
 
-Detection rules written from the sample's actual bytes, not from guessed plaintext — see the Detection section of each post
+Rules are written from the sample's bytes rather than from recovered plaintext, because the plaintext isn't in the file. Each post links to its own rule in `detections/`.
 
-## What you'll find here
+## Sections
 
-| Section | Contents |
+| Section | What goes there |
 | --- | --- |
-| Malware Analysis | Loader / stealer / RAT structure, string obfuscation, C2, persistence, and the rules that catch them |
+| Malware Analysis | Loaders, stealers, RATs, string obfuscation, C2, persistence, detection rules |
 | Windows & AD | Internals, privilege escalation, COM, UAC, LOLBins |
-| CTF Writeups | How I thought about it, not just the flag |
-| Blogs | Notes that don't fit anywhere else |
+| CTF Writeups | How I got there, including the dead ends |
+| Blogs | Everything that doesn't fit above |
 
-## Ground rules
+## How I work
 
-- Every sample is analysed **statically** first. If it has to run, it runs in a VM isolated from any real network.
-- Hashes, addresses and offsets in these posts were verified, not recalled from a training cutoff.
-- No post tells you to run anything on a real machine. The samples are hostile.
+- Static analysis first, always. If a sample has to run, it runs in a VM with no route to a real network.
+- Hashes, addresses and offsets in these posts were read off the file, not remembered.
+- No samples in this repo. Hashes and rules only.
 
-{% hint style="warning" %}
-This is a young site: the piece count is small and growing. Everything here was written by me, published as soon as it was verified.
-{% endhint %}
+Nothing here is a tutorial for running anything on your own machine. The files are hostile.

@@ -1,15 +1,15 @@
 # Windows & AD
 
-Posts in this section are about Windows internals and Active Directory — the parts most people never need to know, and the parts anyone who has to tell malicious from legitimate absolutely does.
+Windows internals and Active Directory. The parts you never need until you're staring at a process that shouldn't be running as SYSTEM.
 
-## Planned
+## What I'm planning to write
 
-- COM objects that can be activated without elevation (and why that matters)
-- UAC: what actually auto-elevates, and what only looks like it does
-- Tokens, integrity levels, and the privileges malware actually wants
+- COM objects you can activate without elevation, and why that matters
+- UAC: what actually auto-elevates versus what only looks like it does
+- Tokens, integrity levels, and which privileges malware asks for first
 - LOLBins that still work in 2026
-- AD: Kerberos, delegation, and certificate abuse
+- AD: Kerberos, delegation, certificate abuse
 
-## Rules
+## Ground rule
 
-Every post states **what it was tested on** (build number, patch level), because Windows behaviour changes between builds. If I only tested one VM, I'll say so.
+Every post says what build it was tested on. Windows behaviour moves between builds, and a post without a build number is a post someone will waste an afternoon on. If I only tested one VM, that's what the post will say.

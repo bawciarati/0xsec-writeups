@@ -108,10 +108,35 @@ assets/<family>-<what>.png
 
 ## 7. Voice
 
-- Confident but not boastful — "I did it this way because…" beats "the correct way is…"
-- Admit dead ends: writing about what didn't work is worth more than only showing what did
-- Never name or shame victims, and don't publish anything that lets a reader reproduce an attack in one step (e.g. a working C2 client)
-- Client/work samples: strip hashes and domains, and say they were anonymised
+Read it back in your head. If a sentence sounds like a conference bio or a product page, rewrite it.
+
+Things that make text read as machine-written, and what to do instead:
+
+| Don't | Do |
+| --- | --- |
+| "It's not just X, it's Y." | Say what it is. Once per post, at most, if it's genuinely surprising. |
+| Three-item lists in every paragraph | Use two items, or four, or a plain sentence |
+| A bold label opening every paragraph | Plain prose. Bold is for the metadata table and warnings. |
+| Em dashes everywhere | Commas, parentheses, or a full stop |
+| "This raises the question…", "Here's the thing" | Just ask the question, or state the thing |
+| "Robust", "leverage", "seamless", "landscape", "critical" | The actual number, tool, or behaviour |
+| A rhetorical one-liner to close each section | Stop when the information stops |
+| Clever headings ("The Sound of Silence") | "The update check", "What it doesn't do" |
+| Symmetrical sentences ("Not X. Not Y. Just Z.") | Uneven sentences, because that's how people write |
+
+Other habits that help:
+
+- One concrete detail beats three adjectives. "1,740,800 bytes, 97% of it one PNG" is worth more than "bloated".
+- Admit dead ends. Writing about what didn't work is worth more than only showing what did.
+- Vary paragraph length. A one-line paragraph is fine.
+- Never name or shame victims, and don't publish anything that lets a reader reproduce an attack in one step (a working C2 client, for example).
+- Client or work samples: strip hashes and domains, and say they were anonymised.
+
+## 7b. Headings and post openings
+
+- The first paragraph after H1 should tell the reader what the file is and why it exists. No scene setting.
+- Skip "In this post we will…" and any table of contents in prose. The sidebar already does that job.
+- A section that only repeats the TL;DR should not exist.
 
 ## 8. Pre-publish checklist
 
