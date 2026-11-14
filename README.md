@@ -2,7 +2,7 @@
 
 Most of what's on this site is malware analysis. Loaders, droppers, RATs, whatever ended up in my samples folder that week. I also spend time on Windows internals, some CTFs, and the occasional web app.
 
-Everything here comes from a file I opened myself. If a post says a string decodes to a URL, I ran the decoder and printed the URL. If I couldn't confirm something, the post says so in a limitations section, because a writeup that hides its gaps is worse than no writeup.
+Everything here is written from a file I opened myself, with one exception so far: the Rust loader post is built on another analyst's decompilation, and it says so in the first section and in the provenance table at the bottom. If a post says a string decodes to a URL, the decoder was run and the URL printed. If I couldn't confirm something, the post says so in a limitations section, because a writeup that hides its gaps is worse than no writeup.
 
 I publish as `bpiecks`.
 
@@ -24,6 +24,10 @@ A WeMod patcher that rewrites `app.asar`, side-loads a `version.dll` proxy to fl
 
 A shortcut that carries its own base64 payload, a Microsoft-signed ClickOnce host copied into the Startup folder, and four lines of `.exe.config` that make the CLR load a stranger's assembly before `Main` runs.
 
+### [RustyWater: Analyzing a MuddyWater Rust Loader](malware-analysis/2026-11-14-muddywater-rust-loader.md)
+
+An inventory of security products under `C:\ProgramData`, a per-user file association that makes a screen saver open as a text document, an empty Startup item of that new type, and a beacon that looks like Outlook fetching a favicon. Written from a published analysis, with the parts I could test marked as measured.
+
 ### [UAC Bypass: Analyzing the CMSTPLUA COM Object](windows/2026-11-13-uac-bypass-cmstplua.md)
 
 Where the auto-approved CLSID is registered, why `cmstplua.dll` forwards to `cmlua.dll`, and which vtable slot `ShellExec` really occupies.
@@ -44,7 +48,8 @@ Rules are written from the sample's bytes rather than from recovered plaintext, 
 ## How I work
 
 - Static analysis first, always. If a sample has to run, it runs in a VM with no route to a real network.
-- Hashes, addresses and offsets in these posts were read off the file, not remembered.
+- Hashes, addresses and offsets in these posts were read off the file, or they are quoted from a named source and listed as quoted in the provenance table.
+- Where a post is a review of someone else's analysis, the arithmetic and the Windows behaviour it depends on are re-checked here, and the places where the source does not add up are called out.
 - No samples in this repo. Hashes and rules only.
 
 Nothing here is a tutorial for running anything on your own machine. The files are hostile.
