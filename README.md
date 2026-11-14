@@ -24,7 +24,7 @@ A WeMod patcher that rewrites `app.asar`, side-loads a `version.dll` proxy to fl
 
 A shortcut that carries its own base64 payload, a Microsoft-signed ClickOnce host copied into the Startup folder, and four lines of `.exe.config` that make the CLR load a stranger's assembly before `Main` runs.
 
-### [RustyWater: Analyzing a MuddyWater Rust Loader](malware-analysis/2026-11-14-muddywater-rust-loader.md)
+### [RustyWater: Reverse Engineering MuddyWater's Rust Toolkit](malware-analysis/2026-11-14-muddywater-rust-loader.md)
 
 An inventory of security products under `C:\ProgramData`, a per-user file association that makes a screen saver open as a text document, an empty Startup item of that new type, and a beacon that looks like Outlook fetching a favicon. Written from a published analysis, with the parts I could test marked as measured.
 
