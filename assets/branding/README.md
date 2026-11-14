@@ -36,6 +36,23 @@ The reference header renders its title as Iosevka at 16 px, weight 600,
 letter-spacing -0.4 px, next to a 32 px icon. That was read from the computed
 style of the title element, not guessed from a screenshot.
 
+### Uploading it as the site font
+
+`font/IosevkaNF-Regular-latin.woff2` and `font/IosevkaNF-Bold-latin.woff2` are
+the same typeface cut down to Latin and punctuation, which is all this site
+publishes. 411 glyphs, 87 KB each, weights 400 and 700, against 12.9 MB for the
+untouched TTF. GitBook wants a regular and a bold file, `.woff` or `.woff2`,
+so this pair is exactly what the Add custom font dialog asks for.
+
+Made with `fontTools.subset --flavor=woff2` on Python 3.14 with brotli, script
+`%TEMP%\to_woff2.py`. Re-cut with a wider `--unicodes` range if the site ever
+needs glyphs outside Latin-1 and general punctuation.
+
+The setting is Site styles -> Font family -> Custom fonts, which GitBook marks
+as Ultimate. On a lower plan the option is not there, and no repository change
+can substitute for it: the published site's typography is a site setting, not
+content.
+
 ## How the files were made
 
 The figure is the original `1300 x 1304` upload, rounded and left-aligned on a
